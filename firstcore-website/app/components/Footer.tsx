@@ -23,9 +23,10 @@ const Footer = () => {
               고객사의 성공적인 비즈니스를 지원합니다.
             </p>
             <div className="space-y-2 text-sm text-gray-400">
-              <p>회사명: ㈜퍼스트코어</p>
-              <p>대표자: OOO</p>
-              <p>사업자등록번호: 000-00-00000</p>
+              <p>회사명: (주)퍼스트코어</p>
+              <p>대표자: 김태훈</p>
+              <p>사업자등록번호: 153-86-00012</p>
+              <p>주소: 경상북도 구미시 1공단로6길 64-23 (공단동)</p>
             </div>
           </div>
 
@@ -67,7 +68,7 @@ const Footer = () => {
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <span>031-429-6840~1</span>
+                <span>054-973-2100</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
@@ -95,7 +96,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* 저작권 */}
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
-              <p>&copy; 2024 First Core Co., Ltd. All rights reserved.</p>
+              <p>&copy; 2015-2025 First Core Co., Ltd. All rights reserved.</p>
             </div>
 
             {/* 개인정보 및 약관 링크 */}
