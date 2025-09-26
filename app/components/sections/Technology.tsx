@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Monitor, Cpu, Zap, Shield, ChevronLeft, ChevronRight, X } from 'lucide-react'
 
 const Technology = () => {
@@ -126,13 +127,17 @@ const Technology = () => {
                 }}
                 className="relative aspect-square bg-gray-100 rounded-lg overflow-hidden cursor-pointer group"
               >
+                <Image 
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                   <p className="absolute bottom-2 left-2 text-white text-sm font-medium">
                     {image.alt}
                   </p>
-                </div>
-                <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                  <span className="text-gray-400">{image.alt}</span>
                 </div>
               </motion.div>
             ))}
@@ -172,12 +177,20 @@ const Technology = () => {
               <ChevronRight className="w-8 h-8" />
             </button>
             
-            <div className="max-w-4xl max-h-[80vh] bg-white rounded-lg overflow-hidden">
-              <div className="aspect-video bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-600 text-xl">
-                  {equipmentImages[currentIndex].alt}
-                </span>
+            <div className="max-w-4xl max-h-[80vh] relative">
+              <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden">
+                <Image 
+                  src={equipmentImages[currentIndex].src}
+                  alt={equipmentImages[currentIndex].alt}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 1536px) 100vw, 1536px"
+                  priority
+                />
               </div>
+              <p className="text-white text-center mt-4 text-lg">
+                {equipmentImages[currentIndex].alt}
+              </p>
             </div>
           </div>
         )}

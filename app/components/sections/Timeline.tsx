@@ -97,7 +97,7 @@ const Timeline = () => {
             >
               {/* 컨텐츠 */}
               <div className="flex-1 md:pr-8">
-                <div className={`bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                <div className={`bg-white rounded-xl p-12 shadow-lg hover:shadow-xl transition-shadow ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
                   <div className={`flex items-center gap-2 mb-3 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
                     <span className="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-bold">
                       {milestone.year}
@@ -142,7 +142,7 @@ const Timeline = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mt-20 bg-gradient-to-r from-primary-600 to-blue-600 rounded-2xl p-12 text-white text-center"
+          className="mt-20 bg-gradient-to-r from-primary-600 to-blue-600 rounded-2xl p-24 text-white text-center"
         >
           <h3 className="text-3xl font-bold mb-4">
             2030 비전: 글로벌 TOP 10 제조기업
