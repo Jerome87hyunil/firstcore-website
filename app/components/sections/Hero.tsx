@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Play } from 'lucide-react'
+import { ArrowRight, Download, MessageSquare } from 'lucide-react'
 
 const Hero = () => {
   return (
@@ -67,14 +67,23 @@ const Hero = () => {
             transition={{ delay: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <button className="group inline-flex items-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-semibold transition-all transform hover:scale-105">
-              회사소개서 다운로드
+            <a 
+              href="#contact"
+              className="group inline-flex items-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-semibold transition-all transform hover:scale-105"
+            >
+              <MessageSquare className="mr-2 w-5 h-5" />
+              문의하기
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="group inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/30 rounded-lg font-semibold transition-all">
-              <Play className="mr-2 w-5 h-5" />
-              기업 소개 영상
-            </button>
+            </a>
+            <a 
+              href="https://www.dropbox.com/scl/fi/ynfr5j23tsy6aq31dei05/.pdf?rlkey=kx8ej8arloy1xh1ttrxm8ymsa&st=56yiu2by&dl=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/30 rounded-lg font-semibold transition-all"
+            >
+              <Download className="mr-2 w-5 h-5" />
+              회사소개서 다운로드
+            </a>
           </motion.div>
 
           {/* 통계 */}

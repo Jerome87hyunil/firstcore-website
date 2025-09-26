@@ -9,12 +9,12 @@ const Navigation = () => {
   const [language, setLanguage] = useState('KO')
 
   const menuItems = [
-    { name: '회사소개', href: '#about' },
-    { name: '사업영역', href: '#services' },
-    { name: '기술력', href: '#technology' },
-    { name: '연혁', href: '#timeline' },
-    { name: '인증', href: '#certifications' },
-    { name: '문의', href: '#contact' },
+    { name: '회사소개', href: '/#about' },
+    { name: '사업영역', href: '/#services' },
+    { name: '기술력', href: '/#technology' },
+    { name: '연혁', href: '/#timeline' },
+    { name: '인증', href: '/#certifications' },
+    { name: '문의', href: '/#contact' },
   ]
 
   return (
@@ -23,7 +23,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* 로고 */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2" prefetch={true}>
               <div className="text-2xl font-bold text-primary-600">
                 FIRST<span className="text-gray-800">CORE</span>
               </div>
@@ -37,6 +37,7 @@ const Navigation = () => {
                 key={item.name}
                 href={item.href}
                 className="text-gray-700 hover:text-primary-600 font-medium transition-colors"
+                prefetch={true}
               >
                 {item.name}
               </Link>
@@ -75,6 +76,7 @@ const Navigation = () => {
                 href={item.href}
                 className="block px-3 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md"
                 onClick={() => setIsOpen(false)}
+                prefetch={true}
               >
                 {item.name}
               </Link>

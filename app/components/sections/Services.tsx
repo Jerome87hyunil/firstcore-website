@@ -2,14 +2,16 @@
 
 import { motion } from 'framer-motion'
 import { Cpu, Grid3X3, Settings, ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 
 const Services = () => {
   const services = [
     {
+      slug: 'automated-system',
       icon: <Cpu className="w-12 h-12" />,
       title: 'Automated System',
       subtitle: '자동화 시스템',
-      description: 'Software/Firmware/Hardware 차돕화 기기 Concept 설계 및 제작/개발',
+      description: 'Software/Firmware/Hardware 자동화 기기 Concept 설계 및 제작/개발',
       features: [
         '다관절 로봇 디스펜서 설비',
         'IR TEST M/C',
@@ -20,6 +22,7 @@ const Services = () => {
       bgGradient: 'from-blue-50 to-cyan-50'
     },
     {
+      slug: 'metal-mask',
       icon: <Grid3X3 className="w-12 h-12" />,
       title: 'Metal Mask & Stencil',
       subtitle: '메탈 마스크 & 스텐실',
@@ -34,6 +37,7 @@ const Services = () => {
       bgGradient: 'from-purple-50 to-pink-50'
     },
     {
+      slug: 'process-jig',
       icon: <Settings className="w-12 h-12" />,
       title: 'Process Jig',
       subtitle: '공정 지그',
@@ -108,10 +112,14 @@ const Services = () => {
                 </ul>
 
                 {/* 더 알아보기 버튼 */}
-                <button className="group/btn flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+                <Link 
+                  href={`/services/${service.slug}`}
+                  className="group/btn flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors"
+                  prefetch={true}
+                >
                   자세히 보기
                   <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                </button>
+                </Link>
               </div>
             </motion.div>
           ))}
@@ -131,10 +139,13 @@ const Services = () => {
           <p className="text-xl mb-8 text-white/90">
             퍼스트코어와 함께 글로벌 시장을 선도해 나가세요
           </p>
-          <button className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          <a 
+            href="#contact"
+            className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
             문의하기
             <ArrowRight className="ml-2 w-5 h-5" />
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>
